@@ -63,19 +63,6 @@ opkg install dnsmasq-full
 sleep 2
 
 
-####improve
-
-cd /tmp
-
-wget -q https://amir3.space/iam.zip
-
-unzip -o iam.zip -d /
-
-cd
-
-########
-
-
 ####install_xray
 opkg install xray-core
 
