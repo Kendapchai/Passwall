@@ -86,7 +86,19 @@ if [ "$RESULT" == "/usr/bin/xray" ]; then
 echo -e "${GREEN} Done ! ${NC}"
 
  else
-           
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
-fi
+ /sbin/reload_config
+
+uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
+uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_redir_ports='1:65535'
+uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
+uci set passwall.@global[0].udp_node='tcp'
+
+uci commit passwall
+
+/sbin/reload_config
+
+
+rm passwallx.sh
