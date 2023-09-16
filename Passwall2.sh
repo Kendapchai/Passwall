@@ -32,3 +32,6 @@ EOF
 for feed in passwall_luci passwall_packages passwall2; do
   echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$release/$arch/$feed" >> /etc/opkg/customfeeds.conf
 done
+
+### Update ###
+opkg update 
