@@ -6,7 +6,7 @@ echo "src/gz custom_arch https://raw.githubusercontent.com/lrdrdn/my-opkg-repo/m
 
 opkg update
 
-wget https://github.com/Thanhdoanh247/Passwall/releases/download/Passwall2/luci-app-passwall2_1.18-1_all.ipk
+wget https://github.com/Thanhdoanh247/Passwall/releases/download/Passwall2/luci-app-passwall2_1.18-1_all.ipk -O /tmp/luci-app-passwall2_1.18-1_all.ipk
 opkg install /tmp/luci-app-passwall2_1.18-1_all.ipk
 
 opkg remove dnsmasq
