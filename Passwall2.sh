@@ -11,6 +11,6 @@ opkg install /tmp/luci-app-passwall2_1.18-1_all.ipk
 
 opkg remove dnsmasq
 
-opkg install  ipset ipt2socks iptables iptables-legacy iptables-mod-conntrack-extra iptables-mod-iprange iptables-mod-socket iptables-mod-tproxy kmod-ipt-nat dnsmasq-full
+opkg install  ipset ipt2socks iptables iptables-mod-conntrack-extra iptables-mod-iprange iptables-mod-tproxy kmod-ipt-nat dnsmasq-full
 
 rm Passwall2.sh
